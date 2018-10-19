@@ -1,0 +1,77 @@
+<template>
+    <div>
+        <div  class="title">猜你喜欢</div>
+        <ul>
+            <li class="item border-bottom" v-for="item in recommendList" :key="item.id">
+                <img class="item-img" :src="item.imgUrl" />
+                <div class="item-info">
+                    <p class="item-title">{{item.title}}</p>
+                    <p class="item-desc">{{item.desc}}</p>
+                    <button class="item-button">查看详情</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+</template>
+
+<script>
+export default {
+  name: 'HomeRecommend',
+  data () {
+    return {
+      recommendList: [{
+        id: '0001',
+        imgUrl: 'http://img1.qunarzz.com/sight/p0/201401/06/3fbbddda915cb7637439d484440d36be.jpg_200x200_a54e87dd.jpg',
+        title: '杭州云曼温泉',
+        desc: '杭州云曼温泉杭州云曼温泉杭州云曼温泉'
+      }, {
+        id: '0002',
+        imgUrl: 'http://img1.qunarzz.com/sight/p0/1411/b6/662fc49d1d26a5a7775cf6b7f8b4ecec.water.jpg_200x200_7dec115f.jpg',
+        title: '杭州野生动物世界',
+        desc: '杭州野生动物世界杭州野生动物世界杭州野生动物世界'
+      }, {
+        id: '0003',
+        imgUrl: 'http://img1.qunarzz.com/sight/p0/201212/18/f195032e85740a4b93835fbb.jpg_200x200_77761d11.jpg',
+        title: '杭州海底世界',
+        desc: '杭州海底世界杭州海底世界杭州海底世界'
+      }]
+    }
+  }
+}
+</script>
+
+<style lang="stylus" scoped>
+  @import '~styles/mixins.styl'
+  .title
+    margin-top: .2rem
+    line-height .8rem
+    background #eee
+    text-indent .2rem
+  .item
+    display flex
+    height 1.9rem
+    overflow hidden
+    .item-img
+      width 1.7rem
+      height 1.7rem
+      padding .1rem
+    .item-info
+      flex 1
+      padding .1rem
+      min-width 0
+      .item-title
+        line-height .54rem
+        font-size .32rem
+        ellipsis()
+      .item-desc
+        line-height .4rem
+        color #ccc
+        ellipsis()
+      .item-button
+        line-height .44rem
+        margin-top .16rem
+        background #ff9300
+        padding 0 .2rem
+        border-radius .06rem
+        color #fff
+</style>
