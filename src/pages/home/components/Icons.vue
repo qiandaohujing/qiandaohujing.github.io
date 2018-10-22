@@ -45,7 +45,6 @@ export default {
 <style lang="stylus" scoped>
 @import '~styles/varibles.styl'
 @import '~styles/mixins.styl'
-
 .icons >>> .swiper-container
     height 0
     padding-bottom 50%
@@ -65,7 +64,7 @@ export default {
           right 0
           bottom 0.44rem
           box-sizing border-box
-          padding 0.06rem
+          padding 0.1rem
           .icon-img-content
               height 100%
               display block
@@ -75,8 +74,8 @@ export default {
           left 0
           right 0
           bottom 0
-          height 0.44rem
-          line-height 0.44rem
+          height .44rem
+          line-height .44rem
           text-align center
           color $darkTextColor
           ellipsis()
